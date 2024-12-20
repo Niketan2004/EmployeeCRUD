@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns th="http://thymeleaf.org">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" th:href="@{/css/style.css}">
+     <title>Update Employee</title>
+</head>
+<body>
+     <div>
+     
+          <h1>Update Employee</h1>
+          <hr>
+          <a th:href="@{/}" style="align-content: center;">Home</a><br>
+          <hr>
+     <form th:action="@{/emp/employee}" method="POST">
+          <!-- <input type="hidden" name="_method" value="PUT"> -->
+               <!-- Hidden input to store Employee ID -->
+               <input type="hidden" th:value="${employee.id}" name="id">
+     
+               <b>Enter First Name:</b>
+               <input type="text" th:value="${employee.firstName}" name="firstName" required><br><br>
+     
+               <b>Enter Last Name:</b>
+               <input type="text" th:value="${employee.lastName}" name="lastName" required><br><br>
+     
+               <b>Enter Email:</b>
+               <input type="email" th:value="${employee.email}" name="email"><br><br>
+     
+               <b>Enter Mobile Number:</b>
+               <input type="number" th:value="${employee.mobileNumber}" name="mobileNumber" required><br><br>
+     
+               <input type="submit" value="Update">
+               <input type="reset" value="Reset">
+          </form>
+     </div>
+
+</body>
+</html>

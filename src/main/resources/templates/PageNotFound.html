@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>404 Not Found</title>
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+
+          body {
+               font-family: 'Arial', sans-serif;
+               background-color: #f3f4f6;
+               color: #333;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               height: 100vh;
+          }
+
+          .container {
+               text-align: center;
+               max-width: 600px;
+               padding: 40px 20px;
+          }
+
+          h1 {
+               font-size: 6rem;
+               color: #ff6347;
+               /* Tomato color */
+               animation: bounce 1s infinite alternate;
+          }
+
+          h2 {
+               font-size: 2rem;
+               margin-bottom: 20px;
+          }
+
+          p {
+               font-size: 1.2rem;
+               color: #666;
+               margin-bottom: 30px;
+          }
+
+          a {
+               display: inline-block;
+               text-decoration: none;
+               background-color: #ff6347;
+               color: #fff;
+               padding: 15px 30px;
+               font-size: 1rem;
+               border-radius: 50px;
+               transition: all 0.3s ease;
+          }
+
+          a:hover {
+               background-color: #ff4500;
+               /* Darker tomato */
+          }
+
+          .error-emoji {
+               font-size: 5rem;
+               animation: float 3s ease-in-out infinite;
+          }
+
+          @keyframes bounce {
+               0% {
+                    transform: translateY(0);
+               }
+
+               100% {
+                    transform: translateY(-20px);
+               }
+          }
+
+          @keyframes float {
+
+               0%,
+               100% {
+                    transform: translateY(0);
+               }
+
+               50% {
+                    transform: translateY(-10px);
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container">
+          <h1>404</h1>
+          <div class="error-emoji">😢</div>
+          <h2>Oops! Page not found</h2>
+          <p>Sorry, but the page you are looking for does not exist, has been removed, or is temporarily unavailable.
+          </p>
+          <a href="/">Back to Home</a>
+     </div>
+</body>
+
+</html>
