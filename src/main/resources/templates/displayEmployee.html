@@ -43,8 +43,10 @@
                          <td th:text="${emp.email}"></td>
                          <td th:text="${emp.mobileNumber}"></td>
                          <td><a th:href="@{/emp/formToUpdateEmployee(id=${emp.id})}">Update</td>
-                         <td><a th:href="@{/emp/fetchEmployee(id=${emp.id})}">Delete</td>
-                         
+                         <td><a th:href="@{/emp/fetchEmployee(id=${emp.id})}"
+                                   onclick="return confirm('Are you sure you want to delete this employee ?');">Delete
+                         </td>
+
 
                     </tr>
                </tbody>

@@ -33,6 +33,7 @@ a[th\:href]:hover {
 /* Form Container */
 .form-container {
      width: 50%;
+     justify-content: center;
      margin: 20px auto;
      padding: 20px;
      background-color: #ffffff;
@@ -45,6 +46,7 @@ form {
      display: flex;
      flex-direction: column;
      gap: 15px;
+     justify-content: center;
 }
 
 b {
@@ -54,19 +56,20 @@ b {
 
 input[type="text"],
 input[type="email"],
-input[type="number"] {
+input[type="tel"] {
      padding: 10px;
      font-size: 14px;
      border: 2px solid #ddd;
      border-radius: 4px;
-     width: 100%;
+     width: 45%;
+     justify-content: center;
      outline: none;
      transition: border-color 0.3s ease;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
-input[type="number"]:focus {
+input[type="tel"]:focus {
      border-color: #4CAF50;
 }
 
@@ -80,7 +83,8 @@ input[type="reset"] {
      border-radius: 4px;
      cursor: pointer;
      transition: background-color 0.3s ease;
-     width: 100%;
+     width: 50%;
+     justify-content: center;
 }
 
 input[type="submit"]:hover {
@@ -98,6 +102,7 @@ input[type="reset"]:hover {
 /* Table Styles */
 table {
      width: 90%;
+     justify-self: center;
      margin: 20px auto;
      border-collapse: collapse;
      background-color: #ffffff;
@@ -154,6 +159,7 @@ div[th\:if] p {
      font-size: 16px;
      font-weight: bold;
      color: red;
+     
 }
 
 /* Responsive Design */
@@ -165,16 +171,16 @@ div[th\:if] p {
 
      input[type="text"],
      input[type="email"],
-     input[type="number"] {
-          width: 100%;
+     input[type="tel"] {
+          width: 70%;
      }
 
      input[type="submit"],
      input[type="reset"] {
-          width: 100%;
+          width: 70%;
      }
 
      table {
-          width: 100%;
+          width: 70%;
      }
 }

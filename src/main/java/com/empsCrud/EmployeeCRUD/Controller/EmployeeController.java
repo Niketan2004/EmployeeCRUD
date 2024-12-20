@@ -16,37 +16,35 @@ import java.util.Optional;
 @Controller
 @RequestMapping("/emp")
 public class EmployeeController {
+    //Employee Services for all the CRUD operations
     @Autowired
     private EmployeeService employeeService;
 
-    // @Autowired
-    // public EmployeeController(EmployeeService employeeService) {
-    // this.employeeService = employeeService;
-    // }
 
     // displays all the employees that are available in database
     @GetMapping("/employees")
     public String displayAll(Model model) {
         List<Employee> emp = employeeService.findAll();
         model.addAttribute("employees", emp);
-        return "displayEmployee";       //HTML template that displays the list of employees in tabular format
+        return "displayEmployee"; // HTML template that displays the list of employees in tabular format
     }
 
     // Display Employee By There ID
     // Here Exception will occur that must be fixed in exception folder
-    //the exception will accour if employee of given id is not found that is EMPLOYEENOTFOUND EXCEPTION
+    // the exception will accour if employee of given id is not found that is
+    // EMPLOYEENOTFOUND EXCEPTION
     @GetMapping("/displayById")
     public String displayEmpById(@RequestParam("id") Integer id, Model model) {
         Optional<Employee> emp = employeeService.findById(id);
         if (emp != null) {
             model.addAttribute("employees", emp.get());
             return "displayEmployee";
-           
+
         } else {
             // model.addAttribute("employees", null);
-            throw new  EmployeeNotFoundException("Employee with Id "+ id +" not found");        //Wception is currently not working
+            throw new EmployeeNotFoundException("Employee with Id " + id + " not found"); // Exception is currently not working
         }
-     
+
     }
 
     // Displaying form for adding the new Employee

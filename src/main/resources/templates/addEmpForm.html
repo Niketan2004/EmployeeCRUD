@@ -16,17 +16,18 @@
      <hr>
      <div>
           <form th:action="@{/emp/employee}" method="POST">
-               <b >Enter First Name : </b> <input type="text" placeholder="First Name" name="firstName" required><br><br>
-               <b >Enter Last Name : </b> <input type="text" name="lastName" placeholder="Last Name" required><br><br>
-               <b >Enter Email: </b> <input type="email" name="email" placeholder="email"><br><br>
-               <b>Enter Mobile Number : </b> <input type="number" placeholder="Mobile Number" name="mobileNumber" size="10" required><br>
+               <b>Enter First Name : </b> <input type="text" placeholder="First Name" name="firstName" required><br><br>
+               <b>Enter Last Name : </b> <input type="text" name="lastName" placeholder="Last Name" required><br><br>
+               <b>Enter Email: </b> <input type="email" name="email" placeholder="email"><br><br>
+               <b>Enter Mobile Number : </b> <input type="tel" placeholder="Mobile Number" name="mobileNumber"
+                    pattern="[0-9]{10}" minlength="10" maxlength="10" required><br>
                <br>
                <input type="submit" value="submit"><input type="reset" value="reset">
           </form>
 
 
      </div>
-    
+
 </body>
 
 </html>
