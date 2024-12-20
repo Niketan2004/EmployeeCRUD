@@ -1,10 +1,10 @@
 package com.empsCrud.EmployeeCRUD.Controller;
 
 import com.empsCrud.EmployeeCRUD.Entity.Employee;
-import com.empsCrud.EmployeeCRUD.Exception.EmployeeNotFoundException;
 import com.empsCrud.EmployeeCRUD.Service.EmployeeService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -16,10 +16,9 @@ import java.util.Optional;
 @Controller
 @RequestMapping("/emp")
 public class EmployeeController {
-    //Employee Services for all the CRUD operations
+    // Employee Services for all the CRUD operations
     @Autowired
     private EmployeeService employeeService;
-
 
     // displays all the employees that are available in database
     @GetMapping("/employees")
@@ -38,12 +37,8 @@ public class EmployeeController {
         Optional<Employee> emp = employeeService.findById(id);
         if (emp != null) {
             model.addAttribute("employees", emp.get());
-            return "displayEmployee";
-
-        } else {
-            // model.addAttribute("employees", null);
-            throw new EmployeeNotFoundException("Employee with Id " + id + " not found"); // Exception is currently not working
-        }
+        } 
+        return "displayEmployee";
 
     }
 
@@ -58,20 +53,20 @@ public class EmployeeController {
     @PostMapping("/employee")
     public String addEmployee(@ModelAttribute Employee employee) {
         employeeService.save(employee);
-        return "redirect:/emp/employees?status=success";
+        return "redirect:/emp/employees";
     }
 
+    // First shows the form with previous values and after submiting new it is
+    // updated in database
+    // So this Controller shows form to update and also update in database
     @GetMapping("/formToUpdateEmployee")
     public String updateEmployeeForm(@RequestParam("id") Integer id, Model model,
             RedirectAttributes redirectAttributes) {
         Optional<Employee> employee = employeeService.findById(id);
         if (employee.isPresent()) {
             model.addAttribute("employee", employee.get());
-            return "updateEmpForm";
-        } else {
-            redirectAttributes.addFlashAttribute("errorMessage", "Employee not found!");
-            return "redirect:/emp/employees";
-        }
+        } 
+        return "updateEmpForm";
 
     }
 

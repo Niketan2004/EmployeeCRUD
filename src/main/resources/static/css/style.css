@@ -28,6 +28,7 @@ a[th\:href] {
 
 a[th\:href]:hover {
      text-decoration: underline;
+     
 }
 
 /* Form Container */
@@ -76,7 +77,7 @@ input[type="tel"]:focus {
 input[type="submit"],
 input[type="reset"] {
      padding: 10px 20px;
-     font-size: 14px;
+     font-size: 20px;
      color: white;
      background-color: #4CAF50;
      border: none;
@@ -88,15 +89,15 @@ input[type="reset"] {
 }
 
 input[type="submit"]:hover {
-     background-color: #45a049;
+     background-color: #02e64e;
 }
 
 input[type="reset"] {
-     background-color: #f44336;
+     background-color: #da1102;
 }
 
 input[type="reset"]:hover {
-     background-color: #e53935;
+     background-color: #ff7300;
 }
 
 /* Table Styles */
@@ -112,7 +113,7 @@ table {
 }
 
 thead {
-     background-color: #4CAF50;
+     background-color: #246b27;
      color: white;
 }
 
@@ -150,7 +151,7 @@ a {
 }
 
 a:hover {
-     background-color: #1976D2;
+     background-color: #09ead3;
 }
 
 /* Error Message */
