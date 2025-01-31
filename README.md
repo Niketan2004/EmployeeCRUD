@@ -3,16 +3,16 @@
 ## Overview
 The **Employee Management System** is a Spring Boot-based web application that simplifies employee record management. It provides a clean and user-friendly interface for performing CRUD operations (Create, Read, Update, Delete) on employee data. Built using the MVC (Model-View-Controller) architecture, this project ensures a modular structure for easy scalability and maintenance.
 ## Home Page :-
-![Home Page](https://media.licdn.com/dms/image/v2/D5622AQHB8Wwjk7IWDw/feedshare-shrink_2048_1536/B56ZPuMR73G4Ao-/0/1734868017559?e=1738195200&v=beta&t=Rpri_6y65QvieKhECeLiLlZO9CPWF5SmBh0GxGoIu08)
+![Home Page](https://github.com/user-attachments/assets/b0a5835e-582e-4db6-a1cb-08413b518d9b)
 
 ## Searching Employee with their ID :-
-![Search Employee](https://media.licdn.com/dms/image/v2/D5622AQFwG-eElBTXEA/feedshare-shrink_2048_1536/B56ZPuMR8DG8Ao-/0/1734868017523?e=1738195200&v=beta&t=_H6vqwMdbVdwRtEXSWJAoEnfCWpV1JWcl5X1l36jxSc)
+![Search Employee](https://github.com/user-attachments/assets/b8d44fcc-8ca4-4890-acaa-1674432040f7)
 
 ## Form to Add New Employee :-
-![Adding Employee](https://media.licdn.com/dms/image/v2/D5622AQEhnRDJVIdvlQ/feedshare-shrink_2048_1536/B56ZPuMR8AGQAo-/0/1734868017486?e=1738195200&v=beta&t=V-F4HK4EH9nwdiHKscYsv7Xz0epuMkQoZ0bOqkFVuaI)
+![Adding Employee](https://github.com/user-attachments/assets/fb8af62f-9dfc-4c05-9b63-2a202254a054)
 
 ## Form to Update Employee :-
-![Updating Employee](https://media.licdn.com/dms/image/v2/D5622AQHn-iGEYIT-eQ/feedshare-shrink_2048_1536/B56ZPuMR8oGsAs-/0/1734868017626?e=1738195200&v=beta&t=KNUYtT3jmfXGKTckHU9VQEuH2MrcAFBAs4HEF8KK0YI)
+![Updating Employee](https://github.com/user-attachments/assets/189704db-f79d-40f1-97fa-84a6137b7ee7)
 ## Features 🌟
 - 📝 **Add Employees**: Enter and save new employee details in the database.
 - 📋 **View Employees**: Display a list of all employees or search for specific ones.
